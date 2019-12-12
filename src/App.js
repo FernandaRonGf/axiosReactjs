@@ -4,6 +4,10 @@ import './App.css';
 import Navbar from './components/Navbar'
 import Card from './components/Card'
 import Form from './components/Form'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import $ from 'jquery';
+import Popper from 'popper.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 class App extends Component {
   constructor(props){
