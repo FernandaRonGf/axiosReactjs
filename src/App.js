@@ -2,12 +2,13 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar'
-import Card from './components/Card'
+import {Card} from './components/Card'
 import Form from './components/Form'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import $ from 'jquery';
 import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import axios from 'axios';
 
 class App extends Component {
   constructor(props){
@@ -31,6 +32,10 @@ class App extends Component {
       <header className="App-header">
      <h2>{this.state.message}</h2>
       </header>
+      <Navbar />
+      <Card />
+      <Form />
+
     </div>
     )
   }
