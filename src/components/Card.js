@@ -1,16 +1,19 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export function Card() {
+export function Card(props) {
   return (
-    <div>
-      <div className="card" style={{ width: "18%" }}>
+      
+   props.photos ? props.photos.data.map(photo => {
+          return(
+<div>
+  <div className="row" style={{display:'flex'}}>
+      <div className="card col" style={{ width: "18%" }}>
         <img src="..." className="card-img-top" alt="..."></img>
         <div className="card-body">
-          <h5 className="card-title">Card title</h5>
+          <h5 className="card-title"></h5>
           <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+          {photo.title}
           </p>
           <a href="#" className="btn btn-primary">
             Go somewhere
@@ -18,5 +21,8 @@ export function Card() {
         </div>
       </div>
     </div>
-  );
+    </div>)
+      }) : null 
+    
+  )
 }
