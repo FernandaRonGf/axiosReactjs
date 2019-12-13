@@ -5,9 +5,9 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: null,
-      body: null,
-      userId: null
+      title: '',
+      body: '',
+      userId: ''
     };
   }
   handleTitleChange = event => {
